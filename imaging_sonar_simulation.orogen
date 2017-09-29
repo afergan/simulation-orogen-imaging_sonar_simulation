@@ -42,7 +42,12 @@ task_context "Task" do
     # Write shader image
     property("write_shader_image", "bool", false).dynamic
 
-    # Underwater acoustic attenuation properties (water temperature and sonar frequency)
+    # Underwater acoustic attenuation properties
+    # by default:
+    # - frequency: 300 kHz
+    # - temperature: 25 ºC
+    # - salinity: 0 ppt
+    # - acidity: 8 pH
     property("attenuation_properties", "imaging_sonar_simulation/AcousticAttenuationProperties").dynamic
 
     # Output sonar data (Sonar)
